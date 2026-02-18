@@ -195,6 +195,9 @@
 
 <body>
 
+    <!-- Hidden iframe for form submission (bypasses CORS) -->
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+
     <div class="form-container">
         <!-- Logo Header -->
         <div class="header-image">
@@ -856,16 +859,16 @@
             document.getElementById('submitButton').disabled = true;
             document.getElementById('loadingMessage').style.display = 'block';
 
-            fetch(SCRIPT_URL, { method: 'POST', body: new URLSearchParams(new FormData(form)), mode: 'no-cors' })
-                .then(() => {
-                    showThankYouPage();
-                })
-                .catch(error => {
-                    document.getElementById('loadingMessage').style.display = 'none';
-                    alert('Erreur lors de l\'envoi. Vérifiez votre connexion.');
-                    console.error('Error!', error.message);
-                    document.getElementById('submitButton').disabled = false;
-                });
+            // Use native form submission via hidden iframe (bypasses CORS)
+            form.action = SCRIPT_URL;
+            form.method = 'POST';
+            form.target = 'hidden_iframe';
+            form.submit();
+
+            // Show thank you page after a short delay to allow submission
+            setTimeout(() => {
+                showThankYouPage();
+            }, 1500);
         });
     </script>
 </body>
