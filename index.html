@@ -856,8 +856,8 @@
             document.getElementById('submitButton').disabled = true;
             document.getElementById('loadingMessage').style.display = 'block';
 
-            fetch(SCRIPT_URL, { method: 'POST', body: new FormData(form) })
-                .then(response => {
+            fetch(SCRIPT_URL, { method: 'POST', body: new FormData(form), mode: 'no-cors' })
+                .then(() => {
                     showThankYouPage();
                 })
                 .catch(error => {
