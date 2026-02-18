@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,28 +13,34 @@
             font-family: 'Roboto', sans-serif;
             padding-bottom: 50px;
         }
+
         .form-container {
             max-width: 770px;
             margin: 30px auto;
             background: white;
             border-radius: 8px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
             overflow: hidden;
-            border-top: 10px solid #0056b3; /* Bleu Lacme approximatif */
+            border-top: 10px solid #0056b3;
+            /* Bleu Lacme approximatif */
         }
+
         .header-image {
             text-align: center;
             padding: 20px;
             background-color: white;
             border-bottom: 1px solid #eee;
         }
+
         .header-image img {
             max-width: 250px;
             height: auto;
         }
+
         .form-section {
             padding: 24px;
         }
+
         .section-title {
             font-size: 20px;
             font-weight: 500;
@@ -41,6 +48,7 @@
             margin-bottom: 15px;
             color: #202124;
         }
+
         .question-box {
             margin-bottom: 25px;
             padding: 15px;
@@ -48,30 +56,38 @@
             border-radius: 8px;
             background: #fff;
         }
+
         .question-label {
             font-size: 16px;
             font-weight: 500;
             margin-bottom: 12px;
             display: block;
         }
+
         .required-star {
             color: #d93025;
         }
-        .form-control, .form-select {
+
+        .form-control,
+        .form-select {
             background-color: #fafafa;
-            border: 1px solid #dadce0; 
-            border-bottom: 1px solid #70757a; /* Style Google Forms */
+            border: 1px solid #dadce0;
+            border-bottom: 1px solid #70757a;
+            /* Style Google Forms */
             border-radius: 4px;
         }
+
         .form-control:focus {
             background-color: #fff;
             box-shadow: none;
             border-bottom: 2px solid #0056b3;
         }
+
         /* Cacher les sections conditionnelles par défaut */
         .hidden-section {
             display: none;
         }
+
         .btn-submit {
             background-color: #0056b3;
             color: white;
@@ -80,9 +96,11 @@
             border-radius: 4px;
             border: none;
         }
+
         .btn-submit:hover {
             background-color: #004494;
         }
+
         .intro-text {
             font-size: 14px;
             color: #202124;
@@ -90,6 +108,7 @@
         }
     </style>
 </head>
+
 <body>
 
     <div class="form-container">
@@ -97,21 +116,23 @@
         <div class="header-image">
             <!-- J'utilise le logo que tu as fourni (assure-toi que le fichier logo.png est dans le même dossier sur Github) -->
             <!-- Si tu n'as pas l'image hébergée, remplace src par l'URL de l'image -->
-            <img src="https://github.com/77Darius77/csr-questionnaire-EN/blob/main/Lacme-1080x508%20-%20Clear.png" alt="LACME Logo" id="logo-img">
+            <img src="Lacme-1080x508 - Clear.png" alt="LACME Logo" id="logo-img"
+                onerror="this.onerror=null; this.src='https://raw.githubusercontent.com/77Darius77/csr-questionnaire-EN/main/Lacme-1080x508%20-%20Clear.png';">
         </div>
 
         <div class="form-section">
             <h1 style="font-size: 32px; font-weight: 400;">CSR Questionnaire</h1>
             <p class="intro-text">
                 Lacme SAS is committed to Corporate Social Responsibility (CSR) since 2023.<br><br>
-                To better understand you and build an even more sustainable relationship together, we would like you to share information about your level of maturity in sustainable development.<br><br>
+                To better understand you and build an even more sustainable relationship together, we would like you to
+                share information about your level of maturity in sustainable development.<br><br>
                 This questionnaire is intended for Lacme SAS's procurement suppliers.<br><br>
                 <span class="required-star">* Indique une question obligatoire</span>
             </p>
         </div>
 
         <form id="csrForm">
-            
+
             <!-- Email -->
             <div class="form-section">
                 <div class="question-box">
@@ -123,7 +144,8 @@
             <!-- Section 1 -->
             <div class="form-section">
                 <div class="section-title">Section 1: Identification and Legal Information of the Company</div>
-                <p>The objective of this questionnaire is to update and supplement the information we have about your company.</p>
+                <p>The objective of this questionnaire is to update and supplement the information we have about your
+                    company.</p>
 
                 <div class="question-box">
                     <label class="question-label">2. Company Name <span class="required-star">*</span></label>
@@ -134,19 +156,23 @@
                     <input type="text" class="form-control" name="address" required>
                 </div>
                 <div class="question-box">
-                    <label class="question-label">4. SIRET (Business Identification Number) <span class="required-star">*</span></label>
+                    <label class="question-label">4. SIRET (Business Identification Number) <span
+                            class="required-star">*</span></label>
                     <input type="text" class="form-control" name="siret" required>
                 </div>
                 <div class="question-box">
-                    <label class="question-label">5. Full Name of the Person Completing This Form <span class="required-star">*</span></label>
+                    <label class="question-label">5. Full Name of the Person Completing This Form <span
+                            class="required-star">*</span></label>
                     <input type="text" class="form-control" name="respondent_name" required>
                 </div>
                 <div class="question-box">
-                    <label class="question-label">6. Job Title of the Person Completing This Form <span class="required-star">*</span></label>
+                    <label class="question-label">6. Job Title of the Person Completing This Form <span
+                            class="required-star">*</span></label>
                     <input type="text" class="form-control" name="respondent_title" required>
                 </div>
                 <div class="question-box">
-                    <label class="question-label">7. CSR/Environment/Quality Contact (if different) : (Name, Job Title, Email) <span class="required-star">*</span></label>
+                    <label class="question-label">7. CSR/Environment/Quality Contact (if different) : (Name, Job Title,
+                        Email) <span class="required-star">*</span></label>
                     <textarea class="form-control" name="csr_contact" rows="3" required></textarea>
                 </div>
             </div>
@@ -154,15 +180,19 @@
             <!-- Section 2: General CSR Commitment (The Branching Logic) -->
             <div class="form-section">
                 <div class="section-title">Section 2: General CSR Commitment</div>
-                
+
                 <div class="question-box">
-                    <label class="question-label">8. 1 : Is your company engaged in a structured CSR approach (e.g., formalized policy, defined objectives, reporting, specific actions...) ? <span class="required-star">*</span></label>
+                    <label class="question-label">8. 1 : Is your company engaged in a structured CSR approach (e.g.,
+                        formalized policy, defined objectives, reporting, specific actions...) ? <span
+                            class="required-star">*</span></label>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="structured_csr" id="csr_yes" value="Yes" required onchange="handleBranching()">
+                        <input class="form-check-input" type="radio" name="structured_csr" id="csr_yes" value="Yes"
+                            required onchange="handleBranching()">
                         <label class="form-check-label" for="csr_yes">Yes (Passer à la question 9)</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="structured_csr" id="csr_no" value="No" onchange="handleBranching()">
+                        <input class="form-check-input" type="radio" name="structured_csr" id="csr_no" value="No"
+                            onchange="handleBranching()">
                         <label class="form-check-label" for="csr_no">No (Passer à la question 40)</label>
                     </div>
                 </div>
@@ -175,20 +205,28 @@
                     <p><strong>Governance and CSR Strategy</strong></p>
 
                     <div class="question-box">
-                        <label class="question-label">9. 1 : Is your CSR approach labeled or assessed by an external third party (e.g., EcoVadis, ISO 26000, B Corp...)? <span class="required-star">*</span></label>
-                        <div class="form-check"><input class="form-check-input" type="radio" name="csr_labeled" value="Yes"><label class="form-check-label">Yes</label></div>
-                        <div class="form-check"><input class="form-check-input" type="radio" name="csr_labeled" value="No"><label class="form-check-label">No</label></div>
+                        <label class="question-label">9. 1 : Is your CSR approach labeled or assessed by an external
+                            third party (e.g., EcoVadis, ISO 26000, B Corp...)? <span
+                                class="required-star">*</span></label>
+                        <div class="form-check"><input class="form-check-input" type="radio" name="csr_labeled"
+                                value="Yes"><label class="form-check-label">Yes</label></div>
+                        <div class="form-check"><input class="form-check-input" type="radio" name="csr_labeled"
+                                value="No"><label class="form-check-label">No</label></div>
                     </div>
 
                     <div class="question-box">
-                        <label class="question-label">10. If Yes, which one(s) and what is your current score/level?</label>
+                        <label class="question-label">10. If Yes, which one(s) and what is your current
+                            score/level?</label>
                         <input type="text" class="form-control" name="csr_label_details">
                     </div>
 
                     <div class="question-box">
-                        <label class="question-label">11. 2 : Is your company a signatory of voluntary commitment(s) in CSR (e.g., UN Global Compact...)? <span class="required-star">*</span></label>
-                        <div class="form-check"><input class="form-check-input" type="radio" name="csr_signatory" value="Yes"><label class="form-check-label">Yes</label></div>
-                        <div class="form-check"><input class="form-check-input" type="radio" name="csr_signatory" value="No"><label class="form-check-label">No</label></div>
+                        <label class="question-label">11. 2 : Is your company a signatory of voluntary commitment(s) in
+                            CSR (e.g., UN Global Compact...)? <span class="required-star">*</span></label>
+                        <div class="form-check"><input class="form-check-input" type="radio" name="csr_signatory"
+                                value="Yes"><label class="form-check-label">Yes</label></div>
+                        <div class="form-check"><input class="form-check-input" type="radio" name="csr_signatory"
+                                value="No"><label class="form-check-label">No</label></div>
                     </div>
 
                     <div class="question-box">
@@ -197,9 +235,14 @@
                     </div>
 
                     <div class="question-box">
-                        <label class="question-label">13. 3 : Is there a person or department specifically responsible for CSR within your management? <span class="required-star">*</span></label>
-                        <div class="form-check"><input class="form-check-input" type="radio" name="csr_responsible_exists" value="Yes"><label class="form-check-label">Yes</label></div>
-                        <div class="form-check"><input class="form-check-input" type="radio" name="csr_responsible_exists" value="No"><label class="form-check-label">No</label></div>
+                        <label class="question-label">13. 3 : Is there a person or department specifically responsible
+                            for CSR within your management? <span class="required-star">*</span></label>
+                        <div class="form-check"><input class="form-check-input" type="radio"
+                                name="csr_responsible_exists" value="Yes"><label class="form-check-label">Yes</label>
+                        </div>
+                        <div class="form-check"><input class="form-check-input" type="radio"
+                                name="csr_responsible_exists" value="No"><label class="form-check-label">No</label>
+                        </div>
                     </div>
 
                     <!-- Details of person (14-16) -->
@@ -214,9 +257,12 @@
                     </div>
 
                     <div class="question-box">
-                        <label class="question-label">17. 4 : Does your company publish a CSR/sustainability report? <span class="required-star">*</span></label>
-                        <div class="form-check"><input class="form-check-input" type="radio" name="csr_report" value="Yes"><label class="form-check-label">Yes</label></div>
-                        <div class="form-check"><input class="form-check-input" type="radio" name="csr_report" value="No"><label class="form-check-label">No</label></div>
+                        <label class="question-label">17. 4 : Does your company publish a CSR/sustainability report?
+                            <span class="required-star">*</span></label>
+                        <div class="form-check"><input class="form-check-input" type="radio" name="csr_report"
+                                value="Yes"><label class="form-check-label">Yes</label></div>
+                        <div class="form-check"><input class="form-check-input" type="radio" name="csr_report"
+                                value="No"><label class="form-check-label">No</label></div>
                     </div>
                     <div class="question-box">
                         <label class="question-label">18. If Yes, can you provide a link or the document?</label>
@@ -224,36 +270,59 @@
                     </div>
 
                     <div class="question-box">
-                        <label class="question-label">19. 5 : Have you implemented an internal (ethical or CSR) code of conduct? <span class="required-star">*</span></label>
-                        <div class="form-check"><input class="form-check-input" type="radio" name="code_of_conduct" value="Yes"><label class="form-check-label">Yes</label></div>
-                        <div class="form-check"><input class="form-check-input" type="radio" name="code_of_conduct" value="No"><label class="form-check-label">No</label></div>
+                        <label class="question-label">19. 5 : Have you implemented an internal (ethical or CSR) code of
+                            conduct? <span class="required-star">*</span></label>
+                        <div class="form-check"><input class="form-check-input" type="radio" name="code_of_conduct"
+                                value="Yes"><label class="form-check-label">Yes</label></div>
+                        <div class="form-check"><input class="form-check-input" type="radio" name="code_of_conduct"
+                                value="No"><label class="form-check-label">No</label></div>
                     </div>
 
                     <div class="question-box">
-                        <label class="question-label">20. 6 : Do you have a system allowing stakeholders to raise concerns (whistleblowing)? <span class="required-star">*</span></label>
-                        <div class="form-check"><input class="form-check-input" type="radio" name="whistleblowing" value="Yes"><label class="form-check-label">Yes</label></div>
-                        <div class="form-check"><input class="form-check-input" type="radio" name="whistleblowing" value="No"><label class="form-check-label">No</label></div>
+                        <label class="question-label">20. 6 : Do you have a system allowing stakeholders to raise
+                            concerns (whistleblowing)? <span class="required-star">*</span></label>
+                        <div class="form-check"><input class="form-check-input" type="radio" name="whistleblowing"
+                                value="Yes"><label class="form-check-label">Yes</label></div>
+                        <div class="form-check"><input class="form-check-input" type="radio" name="whistleblowing"
+                                value="No"><label class="form-check-label">No</label></div>
                     </div>
 
                     <p><strong>Working Conditions and Human Rights</strong></p>
-                    
+
                     <div class="question-box">
-                        <label class="question-label">21. 1 : Do you have a formalized policy covering working conditions and Human Rights? <span class="required-star">*</span></label>
-                        <div class="form-check"><input class="form-check-input" type="radio" name="human_rights_policy" value="Yes"><label class="form-check-label">Yes</label></div>
-                        <div class="form-check"><input class="form-check-input" type="radio" name="human_rights_policy" value="No"><label class="form-check-label">No</label></div>
+                        <label class="question-label">21. 1 : Do you have a formalized policy covering working
+                            conditions and Human Rights? <span class="required-star">*</span></label>
+                        <div class="form-check"><input class="form-check-input" type="radio" name="human_rights_policy"
+                                value="Yes"><label class="form-check-label">Yes</label></div>
+                        <div class="form-check"><input class="form-check-input" type="radio" name="human_rights_policy"
+                                value="No"><label class="form-check-label">No</label></div>
                     </div>
-                    
+
                     <div class="question-box">
-                        <label class="question-label">22. 2 : If Yes, which areas are covered (check all that apply)?</label>
-                        <div class="form-check"><input class="form-check-input" type="checkbox" name="hr_areas" value="Child labor"><label class="form-check-label">Prohibition of child labor</label></div>
-                        <div class="form-check"><input class="form-check-input" type="checkbox" name="hr_areas" value="Fair wages"><label class="form-check-label">Fair wages</label></div>
-                        <div class="form-check"><input class="form-check-input" type="checkbox" name="hr_areas" value="Working hours"><label class="form-check-label">Working hours compliant</label></div>
-                        <div class="form-check"><input class="form-check-input" type="checkbox" name="hr_areas" value="Forced labor"><label class="form-check-label">Prohibition of forced labor</label></div>
-                        <div class="form-check"><input class="form-check-input" type="checkbox" name="hr_areas" value="Freedom of association"><label class="form-check-label">Freedom of association</label></div>
-                        <div class="form-check"><input class="form-check-input" type="checkbox" name="hr_areas" value="Non-discrimination"><label class="form-check-label">Non-discrimination</label></div>
-                        <div class="form-check"><input class="form-check-input" type="checkbox" name="hr_areas" value="Harassment"><label class="form-check-label">Prevention of harassment</label></div>
+                        <label class="question-label">22. 2 : If Yes, which areas are covered (check all that
+                            apply)?</label>
+                        <div class="form-check"><input class="form-check-input" type="checkbox" name="hr_areas"
+                                value="Child labor"><label class="form-check-label">Prohibition of child labor</label>
+                        </div>
+                        <div class="form-check"><input class="form-check-input" type="checkbox" name="hr_areas"
+                                value="Fair wages"><label class="form-check-label">Fair wages</label></div>
+                        <div class="form-check"><input class="form-check-input" type="checkbox" name="hr_areas"
+                                value="Working hours"><label class="form-check-label">Working hours compliant</label>
+                        </div>
+                        <div class="form-check"><input class="form-check-input" type="checkbox" name="hr_areas"
+                                value="Forced labor"><label class="form-check-label">Prohibition of forced labor</label>
+                        </div>
+                        <div class="form-check"><input class="form-check-input" type="checkbox" name="hr_areas"
+                                value="Freedom of association"><label class="form-check-label">Freedom of
+                                association</label></div>
+                        <div class="form-check"><input class="form-check-input" type="checkbox" name="hr_areas"
+                                value="Non-discrimination"><label class="form-check-label">Non-discrimination</label>
+                        </div>
+                        <div class="form-check"><input class="form-check-input" type="checkbox" name="hr_areas"
+                                value="Harassment"><label class="form-check-label">Prevention of harassment</label>
+                        </div>
                     </div>
-                    
+
                     <div class="question-box">
                         <label class="question-label">23. Other (specify)</label>
                         <input type="text" class="form-control" name="hr_other">
@@ -261,14 +330,20 @@
 
                     <p><strong>Occupational Health and Safety</strong></p>
                     <div class="question-box">
-                        <label class="question-label">24. 1 : Do you have a formalized Occupational Health and Safety (OHS) policy? <span class="required-star">*</span></label>
-                        <div class="form-check"><input class="form-check-input" type="radio" name="ohs_policy" value="Yes"><label class="form-check-label">Yes</label></div>
-                        <div class="form-check"><input class="form-check-input" type="radio" name="ohs_policy" value="No"><label class="form-check-label">No</label></div>
+                        <label class="question-label">24. 1 : Do you have a formalized Occupational Health and Safety
+                            (OHS) policy? <span class="required-star">*</span></label>
+                        <div class="form-check"><input class="form-check-input" type="radio" name="ohs_policy"
+                                value="Yes"><label class="form-check-label">Yes</label></div>
+                        <div class="form-check"><input class="form-check-input" type="radio" name="ohs_policy"
+                                value="No"><label class="form-check-label">No</label></div>
                     </div>
                     <div class="question-box">
-                        <label class="question-label">25. 2 : Do you implement specific actions for occupational risk prevention? <span class="required-star">*</span></label>
-                        <div class="form-check"><input class="form-check-input" type="radio" name="ohs_actions" value="Yes"><label class="form-check-label">Yes</label></div>
-                        <div class="form-check"><input class="form-check-input" type="radio" name="ohs_actions" value="No"><label class="form-check-label">No</label></div>
+                        <label class="question-label">25. 2 : Do you implement specific actions for occupational risk
+                            prevention? <span class="required-star">*</span></label>
+                        <div class="form-check"><input class="form-check-input" type="radio" name="ohs_actions"
+                                value="Yes"><label class="form-check-label">Yes</label></div>
+                        <div class="form-check"><input class="form-check-input" type="radio" name="ohs_actions"
+                                value="No"><label class="form-check-label">No</label></div>
                     </div>
                     <div class="question-box">
                         <label class="question-label">26. If Yes, can you provide some examples?</label>
@@ -277,17 +352,26 @@
 
                     <p><strong>Business Ethics</strong></p>
                     <div class="question-box">
-                        <label class="question-label">27. 1 : Do you have a formalized business ethics policy? <span class="required-star">*</span></label>
-                        <div class="form-check"><input class="form-check-input" type="radio" name="ethics_policy" value="Yes"><label class="form-check-label">Yes</label></div>
-                        <div class="form-check"><input class="form-check-input" type="radio" name="ethics_policy" value="No"><label class="form-check-label">No</label></div>
+                        <label class="question-label">27. 1 : Do you have a formalized business ethics policy? <span
+                                class="required-star">*</span></label>
+                        <div class="form-check"><input class="form-check-input" type="radio" name="ethics_policy"
+                                value="Yes"><label class="form-check-label">Yes</label></div>
+                        <div class="form-check"><input class="form-check-input" type="radio" name="ethics_policy"
+                                value="No"><label class="form-check-label">No</label></div>
                     </div>
                     <div class="question-box">
                         <label class="question-label">28. 2 : If yes, which areas are covered?</label>
                         <!-- Checkboxes simplified for code brevity, add all from PDF -->
-                        <div class="form-check"><input class="form-check-input" type="checkbox" name="ethics_areas" value="Corruption"><label class="form-check-label">Fight against corruption</label></div>
-                        <div class="form-check"><input class="form-check-input" type="checkbox" name="ethics_areas" value="Privacy"><label class="form-check-label">Privacy and data protection</label></div>
-                        <div class="form-check"><input class="form-check-input" type="checkbox" name="ethics_areas" value="Transparency"><label class="form-check-label">Transparency</label></div>
-                         <div class="form-check"><input class="form-check-input" type="checkbox" name="ethics_areas" value="Competition"><label class="form-check-label">Fair competition</label></div>
+                        <div class="form-check"><input class="form-check-input" type="checkbox" name="ethics_areas"
+                                value="Corruption"><label class="form-check-label">Fight against corruption</label>
+                        </div>
+                        <div class="form-check"><input class="form-check-input" type="checkbox" name="ethics_areas"
+                                value="Privacy"><label class="form-check-label">Privacy and data protection</label>
+                        </div>
+                        <div class="form-check"><input class="form-check-input" type="checkbox" name="ethics_areas"
+                                value="Transparency"><label class="form-check-label">Transparency</label></div>
+                        <div class="form-check"><input class="form-check-input" type="checkbox" name="ethics_areas"
+                                value="Competition"><label class="form-check-label">Fair competition</label></div>
                     </div>
                     <div class="question-box">
                         <label class="question-label">29. Other (specify):</label>
@@ -296,48 +380,74 @@
 
                     <p><strong>Environment (General)</strong></p>
                     <div class="question-box">
-                        <label class="question-label">30. 1 : Do you have a formalized environmental policy? <span class="required-star">*</span></label>
-                        <div class="form-check"><input class="form-check-input" type="radio" name="env_policy" value="Yes"><label class="form-check-label">Yes</label></div>
-                        <div class="form-check"><input class="form-check-input" type="radio" name="env_policy" value="No"><label class="form-check-label">No</label></div>
+                        <label class="question-label">30. 1 : Do you have a formalized environmental policy? <span
+                                class="required-star">*</span></label>
+                        <div class="form-check"><input class="form-check-input" type="radio" name="env_policy"
+                                value="Yes"><label class="form-check-label">Yes</label></div>
+                        <div class="form-check"><input class="form-check-input" type="radio" name="env_policy"
+                                value="No"><label class="form-check-label">No</label></div>
                     </div>
                     <div class="question-box">
-                        <label class="question-label">31. 2 : Have you implemented an environmental management system (e.g. ISO 14001)? <span class="required-star">*</span></label>
-                        <div class="form-check"><input class="form-check-input" type="radio" name="env_system" value="Yes"><label class="form-check-label">Yes</label></div>
-                         <div class="form-check"><input class="form-check-input" type="radio" name="env_system" value="Yes, certified"><label class="form-check-label">Yes, certified</label></div>
-                        <div class="form-check"><input class="form-check-input" type="radio" name="env_system" value="No"><label class="form-check-label">No</label></div>
+                        <label class="question-label">31. 2 : Have you implemented an environmental management system
+                            (e.g. ISO 14001)? <span class="required-star">*</span></label>
+                        <div class="form-check"><input class="form-check-input" type="radio" name="env_system"
+                                value="Yes"><label class="form-check-label">Yes</label></div>
+                        <div class="form-check"><input class="form-check-input" type="radio" name="env_system"
+                                value="Yes, certified"><label class="form-check-label">Yes, certified</label></div>
+                        <div class="form-check"><input class="form-check-input" type="radio" name="env_system"
+                                value="No"><label class="form-check-label">No</label></div>
                     </div>
-                     <div class="question-box">
-                        <label class="question-label">32. 3 : Do you track key environmental performance indicators? <span class="required-star">*</span></label>
-                        <div class="form-check"><input class="form-check-input" type="radio" name="env_kpi" value="Yes"><label class="form-check-label">Yes</label></div>
-                        <div class="form-check"><input class="form-check-input" type="radio" name="env_kpi" value="No"><label class="form-check-label">No</label></div>
+                    <div class="question-box">
+                        <label class="question-label">32. 3 : Do you track key environmental performance indicators?
+                            <span class="required-star">*</span></label>
+                        <div class="form-check"><input class="form-check-input" type="radio" name="env_kpi"
+                                value="Yes"><label class="form-check-label">Yes</label></div>
+                        <div class="form-check"><input class="form-check-input" type="radio" name="env_kpi"
+                                value="No"><label class="form-check-label">No</label></div>
                     </div>
                     <div class="question-box">
                         <label class="question-label">33. If Yes, certified (Specify):</label>
                         <input type="text" class="form-control" name="env_cert_details">
                     </div>
                     <div class="question-box">
-                        <label class="question-label">34. 4 : Do you use substances subject to restrictions (e.g., REACH, RoHS)? <span class="required-star">*</span></label>
-                        <div class="form-check"><input class="form-check-input" type="radio" name="substances" value="Yes"><label class="form-check-label">Yes</label></div>
-                        <div class="form-check"><input class="form-check-input" type="radio" name="substances" value="No"><label class="form-check-label">No</label></div>
-                         <div class="form-check"><input class="form-check-input" type="radio" name="substances" value="Don't know"><label class="form-check-label">Don't know</label></div>
+                        <label class="question-label">34. 4 : Do you use substances subject to restrictions (e.g.,
+                            REACH, RoHS)? <span class="required-star">*</span></label>
+                        <div class="form-check"><input class="form-check-input" type="radio" name="substances"
+                                value="Yes"><label class="form-check-label">Yes</label></div>
+                        <div class="form-check"><input class="form-check-input" type="radio" name="substances"
+                                value="No"><label class="form-check-label">No</label></div>
+                        <div class="form-check"><input class="form-check-input" type="radio" name="substances"
+                                value="Don't know"><label class="form-check-label">Don't know</label></div>
                     </div>
                     <div class="question-box">
-                        <label class="question-label">35. 5 : If yes, do you have written procedures to manage them? <span class="required-star">*</span></label>
-                        <div class="form-check"><input class="form-check-input" type="radio" name="substances_proc" value="Yes"><label class="form-check-label">Yes</label></div>
-                        <div class="form-check"><input class="form-check-input" type="radio" name="substances_proc" value="No"><label class="form-check-label">No</label></div>
+                        <label class="question-label">35. 5 : If yes, do you have written procedures to manage them?
+                            <span class="required-star">*</span></label>
+                        <div class="form-check"><input class="form-check-input" type="radio" name="substances_proc"
+                                value="Yes"><label class="form-check-label">Yes</label></div>
+                        <div class="form-check"><input class="form-check-input" type="radio" name="substances_proc"
+                                value="No"><label class="form-check-label">No</label></div>
                     </div>
 
                     <p><strong>Responsible Procurement</strong></p>
                     <div class="question-box">
-                        <label class="question-label">36. 1 : Have you defined CSR requirements for your own suppliers? <span class="required-star">*</span></label>
-                        <div class="form-check"><input class="form-check-input" type="radio" name="supplier_csr" value="Yes"><label class="form-check-label">Yes</label></div>
-                        <div class="form-check"><input class="form-check-input" type="radio" name="supplier_csr" value="No"><label class="form-check-label">No</label></div>
+                        <label class="question-label">36. 1 : Have you defined CSR requirements for your own suppliers?
+                            <span class="required-star">*</span></label>
+                        <div class="form-check"><input class="form-check-input" type="radio" name="supplier_csr"
+                                value="Yes"><label class="form-check-label">Yes</label></div>
+                        <div class="form-check"><input class="form-check-input" type="radio" name="supplier_csr"
+                                value="No"><label class="form-check-label">No</label></div>
                     </div>
-                     <div class="question-box">
-                        <label class="question-label">37. 2 : If yes, how do you communicate these requirements? <span class="required-star">*</span></label>
-                        <div class="form-check"><input class="form-check-input" type="checkbox" name="supplier_comm" value="Terms"><label class="form-check-label">General Purchasing Terms</label></div>
-                        <div class="form-check"><input class="form-check-input" type="checkbox" name="supplier_comm" value="Code"><label class="form-check-label">Specific Supplier Code of Conduct</label></div>
-                         <div class="form-check"><input class="form-check-input" type="checkbox" name="supplier_comm" value="Questionnaire"><label class="form-check-label">CSR Assessment Questionnaire</label></div>
+                    <div class="question-box">
+                        <label class="question-label">37. 2 : If yes, how do you communicate these requirements? <span
+                                class="required-star">*</span></label>
+                        <div class="form-check"><input class="form-check-input" type="checkbox" name="supplier_comm"
+                                value="Terms"><label class="form-check-label">General Purchasing Terms</label></div>
+                        <div class="form-check"><input class="form-check-input" type="checkbox" name="supplier_comm"
+                                value="Code"><label class="form-check-label">Specific Supplier Code of Conduct</label>
+                        </div>
+                        <div class="form-check"><input class="form-check-input" type="checkbox" name="supplier_comm"
+                                value="Questionnaire"><label class="form-check-label">CSR Assessment
+                                Questionnaire</label></div>
                     </div>
                     <div class="question-box">
                         <label class="question-label">38. Other (specify):</label>
@@ -345,10 +455,13 @@
                     </div>
 
                     <p><strong>Training</strong></p>
-                     <div class="question-box">
-                        <label class="question-label">39. 1 : Do you organize training or awareness sessions for your employees on CSR topics? <span class="required-star">*</span></label>
-                        <div class="form-check"><input class="form-check-input" type="radio" name="training_sessions" value="Yes"><label class="form-check-label">Yes</label></div>
-                        <div class="form-check"><input class="form-check-input" type="radio" name="training_sessions" value="No"><label class="form-check-label">No</label></div>
+                    <div class="question-box">
+                        <label class="question-label">39. 1 : Do you organize training or awareness sessions for your
+                            employees on CSR topics? <span class="required-star">*</span></label>
+                        <div class="form-check"><input class="form-check-input" type="radio" name="training_sessions"
+                                value="Yes"><label class="form-check-label">Yes</label></div>
+                        <div class="form-check"><input class="form-check-input" type="radio" name="training_sessions"
+                                value="No"><label class="form-check-label">No</label></div>
                     </div>
                 </div>
             </div>
@@ -359,9 +472,13 @@
                     <div class="section-title">Section 3B : Identification of Existing Practices</div>
 
                     <div class="question-box">
-                        <label class="question-label">40. 1 : Even if you do not have a structured CSR approach, is there someone in your company who handles environmental, social, or safety issues? <span class="required-star">*</span></label>
-                        <div class="form-check"><input class="form-check-input" type="radio" name="informal_person" value="Yes"><label class="form-check-label">Yes</label></div>
-                        <div class="form-check"><input class="form-check-input" type="radio" name="informal_person" value="No"><label class="form-check-label">No</label></div>
+                        <label class="question-label">40. 1 : Even if you do not have a structured CSR approach, is
+                            there someone in your company who handles environmental, social, or safety issues? <span
+                                class="required-star">*</span></label>
+                        <div class="form-check"><input class="form-check-input" type="radio" name="informal_person"
+                                value="Yes"><label class="form-check-label">Yes</label></div>
+                        <div class="form-check"><input class="form-check-input" type="radio" name="informal_person"
+                                value="No"><label class="form-check-label">No</label></div>
                     </div>
                     <div class="question-box">
                         <label class="question-label">41. If Yes, can you indicate their role and email?</label>
@@ -369,12 +486,19 @@
                     </div>
 
                     <div class="question-box">
-                        <label class="question-label">42. 2 : Do you track basic indicators, even informally? <span class="required-star">*</span></label>
-                        <div class="form-check"><input class="form-check-input" type="checkbox" name="basic_kpi" value="Electricity"><label class="form-check-label">Electricity consumption</label></div>
-                        <div class="form-check"><input class="form-check-input" type="checkbox" name="basic_kpi" value="Gas"><label class="form-check-label">Gas consumption</label></div>
-                        <div class="form-check"><input class="form-check-input" type="checkbox" name="basic_kpi" value="Water"><label class="form-check-label">Water consumption</label></div>
-                        <div class="form-check"><input class="form-check-input" type="checkbox" name="basic_kpi" value="Accidents"><label class="form-check-label">Workplace accidents</label></div>
-                        <div class="form-check"><input class="form-check-input" type="checkbox" name="basic_kpi" value="None"><label class="form-check-label">None</label></div>
+                        <label class="question-label">42. 2 : Do you track basic indicators, even informally? <span
+                                class="required-star">*</span></label>
+                        <div class="form-check"><input class="form-check-input" type="checkbox" name="basic_kpi"
+                                value="Electricity"><label class="form-check-label">Electricity consumption</label>
+                        </div>
+                        <div class="form-check"><input class="form-check-input" type="checkbox" name="basic_kpi"
+                                value="Gas"><label class="form-check-label">Gas consumption</label></div>
+                        <div class="form-check"><input class="form-check-input" type="checkbox" name="basic_kpi"
+                                value="Water"><label class="form-check-label">Water consumption</label></div>
+                        <div class="form-check"><input class="form-check-input" type="checkbox" name="basic_kpi"
+                                value="Accidents"><label class="form-check-label">Workplace accidents</label></div>
+                        <div class="form-check"><input class="form-check-input" type="checkbox" name="basic_kpi"
+                                value="None"><label class="form-check-label">None</label></div>
                     </div>
                     <div class="question-box">
                         <label class="question-label">43. Other (specify):</label>
@@ -382,21 +506,30 @@
                     </div>
 
                     <div class="question-box">
-                        <label class="question-label">44. 3 : Have you implemented written rules or procedures? <span class="required-star">*</span></label>
-                         <div class="form-check"><input class="form-check-input" type="checkbox" name="written_rules" value="Safety"><label class="form-check-label">Workplace safety</label></div>
-                         <div class="form-check"><input class="form-check-input" type="checkbox" name="written_rules" value="Waste"><label class="form-check-label">Waste sorting</label></div>
-                         <div class="form-check"><input class="form-check-input" type="checkbox" name="written_rules" value="Hiring"><label class="form-check-label">Basic non-discrimination rules</label></div>
+                        <label class="question-label">44. 3 : Have you implemented written rules or procedures? <span
+                                class="required-star">*</span></label>
+                        <div class="form-check"><input class="form-check-input" type="checkbox" name="written_rules"
+                                value="Safety"><label class="form-check-label">Workplace safety</label></div>
+                        <div class="form-check"><input class="form-check-input" type="checkbox" name="written_rules"
+                                value="Waste"><label class="form-check-label">Waste sorting</label></div>
+                        <div class="form-check"><input class="form-check-input" type="checkbox" name="written_rules"
+                                value="Hiring"><label class="form-check-label">Basic non-discrimination rules</label>
+                        </div>
                     </div>
-                     <div class="question-box">
+                    <div class="question-box">
                         <label class="question-label">45. Other (specify):</label>
                         <input type="text" class="form-control" name="written_rules_other">
                     </div>
 
                     <div class="question-box">
-                        <label class="question-label">46. 4 : Would you be interested in information or support from Lacme? <span class="required-star">*</span></label>
-                        <div class="form-check"><input class="form-check-input" type="radio" name="support_interest" value="Yes"><label class="form-check-label">Yes</label></div>
-                        <div class="form-check"><input class="form-check-input" type="radio" name="support_interest" value="No"><label class="form-check-label">No</label></div>
-                         <div class="form-check"><input class="form-check-input" type="radio" name="support_interest" value="Maybe"><label class="form-check-label">Maybe</label></div>
+                        <label class="question-label">46. 4 : Would you be interested in information or support from
+                            Lacme? <span class="required-star">*</span></label>
+                        <div class="form-check"><input class="form-check-input" type="radio" name="support_interest"
+                                value="Yes"><label class="form-check-label">Yes</label></div>
+                        <div class="form-check"><input class="form-check-input" type="radio" name="support_interest"
+                                value="No"><label class="form-check-label">No</label></div>
+                        <div class="form-check"><input class="form-check-input" type="radio" name="support_interest"
+                                value="Maybe"><label class="form-check-label">Maybe</label></div>
                     </div>
                 </div>
             </div>
@@ -408,123 +541,158 @@
                     <p><strong>Waste Management</strong></p>
 
                     <div class="question-box">
-                        <label class="question-label">47. 1 : Do you measure the quantity and nature of waste generated by your activity? <span class="required-star">*</span></label>
-                        <div class="form-check"><input class="form-check-input" type="radio" name="waste_measure" value="Yes detail"><label class="form-check-label">Yes, in detail</label></div>
-                         <div class="form-check"><input class="form-check-input" type="radio" name="waste_measure" value="Yes broadly"><label class="form-check-label">Yes, broadly</label></div>
-                        <div class="form-check"><input class="form-check-input" type="radio" name="waste_measure" value="No"><label class="form-check-label">No</label></div>
+                        <label class="question-label">47. 1 : Do you measure the quantity and nature of waste generated
+                            by your activity? <span class="required-star">*</span></label>
+                        <div class="form-check"><input class="form-check-input" type="radio" name="waste_measure"
+                                value="Yes detail"><label class="form-check-label">Yes, in detail</label></div>
+                        <div class="form-check"><input class="form-check-input" type="radio" name="waste_measure"
+                                value="Yes broadly"><label class="form-check-label">Yes, broadly</label></div>
+                        <div class="form-check"><input class="form-check-input" type="radio" name="waste_measure"
+                                value="No"><label class="form-check-label">No</label></div>
                     </div>
 
                     <div class="question-box">
-                        <label class="question-label">48. 2 : Have you implemented specific actions to reduce waste at the source? <span class="required-star">*</span></label>
-                        <div class="form-check"><input class="form-check-input" type="radio" name="waste_reduce" value="Yes"><label class="form-check-label">Yes</label></div>
-                        <div class="form-check"><input class="form-check-input" type="radio" name="waste_reduce" value="No"><label class="form-check-label">No</label></div>
+                        <label class="question-label">48. 2 : Have you implemented specific actions to reduce waste at
+                            the source? <span class="required-star">*</span></label>
+                        <div class="form-check"><input class="form-check-input" type="radio" name="waste_reduce"
+                                value="Yes"><label class="form-check-label">Yes</label></div>
+                        <div class="form-check"><input class="form-check-input" type="radio" name="waste_reduce"
+                                value="No"><label class="form-check-label">No</label></div>
                     </div>
                     <div class="question-box">
-                         <label class="question-label">49. If Yes, examples:</label>
+                        <label class="question-label">49. If Yes, examples:</label>
                         <input type="text" class="form-control" name="waste_examples">
                     </div>
 
                     <div class="question-box">
-                        <label class="question-label">50. 3 : Have you implemented sorting and recycling channels? <span class="required-star">*</span></label>
-                        <div class="form-check"><input class="form-check-input" type="radio" name="recycling" value="Yes"><label class="form-check-label">Yes</label></div>
-                        <div class="form-check"><input class="form-check-input" type="radio" name="recycling" value="No"><label class="form-check-label">No</label></div>
+                        <label class="question-label">50. 3 : Have you implemented sorting and recycling channels? <span
+                                class="required-star">*</span></label>
+                        <div class="form-check"><input class="form-check-input" type="radio" name="recycling"
+                                value="Yes"><label class="form-check-label">Yes</label></div>
+                        <div class="form-check"><input class="form-check-input" type="radio" name="recycling"
+                                value="No"><label class="form-check-label">No</label></div>
                     </div>
-                     <div class="question-box">
-                         <label class="question-label">51. If Yes, for which main types of waste?</label>
+                    <div class="question-box">
+                        <label class="question-label">51. If Yes, for which main types of waste?</label>
                         <input type="text" class="form-control" name="recycling_types">
                     </div>
 
                     <p><strong>Resource Management</strong></p>
                     <div class="question-box">
-                        <label class="question-label">52. 1 : Do you measure your energy consumption? <span class="required-star">*</span></label>
-                        <div class="form-check"><input class="form-check-input" type="radio" name="energy_measure" value="Yes"><label class="form-check-label">Yes</label></div>
-                        <div class="form-check"><input class="form-check-input" type="radio" name="energy_measure" value="No"><label class="form-check-label">No</label></div>
+                        <label class="question-label">52. 1 : Do you measure your energy consumption? <span
+                                class="required-star">*</span></label>
+                        <div class="form-check"><input class="form-check-input" type="radio" name="energy_measure"
+                                value="Yes"><label class="form-check-label">Yes</label></div>
+                        <div class="form-check"><input class="form-check-input" type="radio" name="energy_measure"
+                                value="No"><label class="form-check-label">No</label></div>
                     </div>
                     <div class="question-box">
-                        <label class="question-label">53. 2 : Have you implemented actions to reduce your energy consumption? <span class="required-star">*</span></label>
-                        <div class="form-check"><input class="form-check-input" type="radio" name="energy_reduce" value="Yes"><label class="form-check-label">Yes</label></div>
-                        <div class="form-check"><input class="form-check-input" type="radio" name="energy_reduce" value="No"><label class="form-check-label">No</label></div>
+                        <label class="question-label">53. 2 : Have you implemented actions to reduce your energy
+                            consumption? <span class="required-star">*</span></label>
+                        <div class="form-check"><input class="form-check-input" type="radio" name="energy_reduce"
+                                value="Yes"><label class="form-check-label">Yes</label></div>
+                        <div class="form-check"><input class="form-check-input" type="radio" name="energy_reduce"
+                                value="No"><label class="form-check-label">No</label></div>
                     </div>
                     <div class="question-box">
-                         <label class="question-label">54. If Yes, examples:</label>
+                        <label class="question-label">54. If Yes, examples:</label>
                         <input type="text" class="form-control" name="energy_examples">
                     </div>
 
-                     <div class="question-box">
-                        <label class="question-label">55. 3 : Do you measure your water consumption? <span class="required-star">*</span></label>
-                        <div class="form-check"><input class="form-check-input" type="radio" name="water_measure" value="Yes"><label class="form-check-label">Yes</label></div>
-                        <div class="form-check"><input class="form-check-input" type="radio" name="water_measure" value="No"><label class="form-check-label">No</label></div>
+                    <div class="question-box">
+                        <label class="question-label">55. 3 : Do you measure your water consumption? <span
+                                class="required-star">*</span></label>
+                        <div class="form-check"><input class="form-check-input" type="radio" name="water_measure"
+                                value="Yes"><label class="form-check-label">Yes</label></div>
+                        <div class="form-check"><input class="form-check-input" type="radio" name="water_measure"
+                                value="No"><label class="form-check-label">No</label></div>
                     </div>
-                     <div class="question-box">
-                        <label class="question-label">56. 4 : Have you implemented actions to reduce your water consumption? <span class="required-star">*</span></label>
-                        <div class="form-check"><input class="form-check-input" type="radio" name="water_reduce" value="Yes"><label class="form-check-label">Yes</label></div>
-                        <div class="form-check"><input class="form-check-input" type="radio" name="water_reduce" value="No"><label class="form-check-label">No</label></div>
+                    <div class="question-box">
+                        <label class="question-label">56. 4 : Have you implemented actions to reduce your water
+                            consumption? <span class="required-star">*</span></label>
+                        <div class="form-check"><input class="form-check-input" type="radio" name="water_reduce"
+                                value="Yes"><label class="form-check-label">Yes</label></div>
+                        <div class="form-check"><input class="form-check-input" type="radio" name="water_reduce"
+                                value="No"><label class="form-check-label">No</label></div>
                     </div>
-                     <div class="question-box">
-                         <label class="question-label">57. If Yes, examples:</label>
+                    <div class="question-box">
+                        <label class="question-label">57. If Yes, examples:</label>
                         <input type="text" class="form-control" name="water_examples">
                     </div>
 
                     <p><strong>Transport and CO2 Emissions</strong></p>
                     <div class="question-box">
-                        <label class="question-label">58. 1 : Have you implemented actions to reduce carbon footprint related to transport? <span class="required-star">*</span></label>
-                         <div class="form-check"><input class="form-check-input" type="radio" name="transport_actions" value="Yes"><label class="form-check-label">Yes</label></div>
-                        <div class="form-check"><input class="form-check-input" type="radio" name="transport_actions" value="No"><label class="form-check-label">No</label></div>
+                        <label class="question-label">58. 1 : Have you implemented actions to reduce carbon footprint
+                            related to transport? <span class="required-star">*</span></label>
+                        <div class="form-check"><input class="form-check-input" type="radio" name="transport_actions"
+                                value="Yes"><label class="form-check-label">Yes</label></div>
+                        <div class="form-check"><input class="form-check-input" type="radio" name="transport_actions"
+                                value="No"><label class="form-check-label">No</label></div>
                     </div>
                     <div class="question-box">
-                         <label class="question-label">59. If Yes, examples:</label>
+                        <label class="question-label">59. If Yes, examples:</label>
                         <input type="text" class="form-control" name="transport_examples">
                     </div>
-                     <div class="question-box">
-                        <label class="question-label">60. 1 : Do you measure (or estimate) the CO2 emissions related to the transport of goods? <span class="required-star">*</span></label>
-                         <div class="form-check"><input class="form-check-input" type="radio" name="co2_measure" value="Yes"><label class="form-check-label">Yes</label></div>
-                        <div class="form-check"><input class="form-check-input" type="radio" name="co2_measure" value="No"><label class="form-check-label">No</label></div>
-                        <div class="form-check"><input class="form-check-input" type="radio" name="co2_measure" value="In progress"><label class="form-check-label">In progress</label></div>
+                    <div class="question-box">
+                        <label class="question-label">60. 1 : Do you measure (or estimate) the CO2 emissions related to
+                            the transport of goods? <span class="required-star">*</span></label>
+                        <div class="form-check"><input class="form-check-input" type="radio" name="co2_measure"
+                                value="Yes"><label class="form-check-label">Yes</label></div>
+                        <div class="form-check"><input class="form-check-input" type="radio" name="co2_measure"
+                                value="No"><label class="form-check-label">No</label></div>
+                        <div class="form-check"><input class="form-check-input" type="radio" name="co2_measure"
+                                value="In progress"><label class="form-check-label">In progress</label></div>
                     </div>
 
                     <p><strong>Eco-Design</strong></p>
                     <div class="question-box">
-                        <label class="question-label">61. 1 : Does your company have an eco-design approach? <span class="required-star">*</span></label>
-                         <div class="form-check"><input class="form-check-input" type="radio" name="ecodesign" value="Yes"><label class="form-check-label">Yes</label></div>
-                        <div class="form-check"><input class="form-check-input" type="radio" name="ecodesign" value="No"><label class="form-check-label">No</label></div>
-                         <div class="form-check"><input class="form-check-input" type="radio" name="ecodesign" value="In progress"><label class="form-check-label">In progress</label></div>
+                        <label class="question-label">61. 1 : Does your company have an eco-design approach? <span
+                                class="required-star">*</span></label>
+                        <div class="form-check"><input class="form-check-input" type="radio" name="ecodesign"
+                                value="Yes"><label class="form-check-label">Yes</label></div>
+                        <div class="form-check"><input class="form-check-input" type="radio" name="ecodesign"
+                                value="No"><label class="form-check-label">No</label></div>
+                        <div class="form-check"><input class="form-check-input" type="radio" name="ecodesign"
+                                value="In progress"><label class="form-check-label">In progress</label></div>
                     </div>
                     <div class="question-box">
-                         <label class="question-label">62. If Yes, can you list the eco-designed products? <span class="required-star">*</span></label>
+                        <label class="question-label">62. If Yes, can you list the eco-designed products? <span
+                                class="required-star">*</span></label>
                         <textarea class="form-control" name="ecodesign_products" rows="3"></textarea>
                     </div>
 
                     <p><strong>Conclusion</strong></p>
                     <div class="question-box">
-                        <label class="question-label">63. 1 : Do you have any comments or suggestions? <span class="required-star">*</span></label>
+                        <label class="question-label">63. 1 : Do you have any comments or suggestions? <span
+                                class="required-star">*</span></label>
                         <textarea class="form-control" name="comments" rows="3"></textarea>
                     </div>
 
                     <div style="text-align: center; margin-top: 30px;">
                         <button type="submit" class="btn btn-submit" id="submitButton">Envoyer</button>
                     </div>
-                    <div id="loadingMessage" style="display:none; text-align: center; margin-top: 10px; color: #0056b3;">Envoi en cours...</div>
-                    <div id="successMessage" style="display:none; text-align: center; margin-top: 10px; color: green; font-weight: bold;">
+                    <div id="loadingMessage"
+                        style="display:none; text-align: center; margin-top: 10px; color: #0056b3;">Envoi en cours...
+                    </div>
+                    <div id="successMessage"
+                        style="display:none; text-align: center; margin-top: 10px; color: green; font-weight: bold;">
                         Merci ! Vos réponses ont bien été enregistrées.
                     </div>
                 </div>
             </div>
-            
+
         </form>
     </div>
 
     <script>
         // Remplace par ton URL Web App Google Apps Script
-        const SCRIPT_URL = 'TON_URL_APPS_SCRIPT_ICI'; 
+        const SCRIPT_URL = 'TON_URL_APPS_SCRIPT_ICI';
 
-        // Logo Logic (Si tu utilises un fichier local, assure-toi qu'il s'appelle logo.png)
-        // Sinon, met l'URL directement dans la balise img plus haut.
-        document.getElementById('logo-img').src = "https://www.lacme.com/logo-lacme.png"; // J'ai mis un lien direct vers le logo de leur site, tu peux changer par 'logo.png' pour du local.
 
         function handleBranching() {
             const yesRadio = document.getElementById('csr_yes');
             const noRadio = document.getElementById('csr_no');
-            
+
             const structuredBranch = document.getElementById('branch-structured');
             const unstructuredBranch = document.getElementById('branch-unstructured');
             const commonEnding = document.getElementById('common-ending');
@@ -533,11 +701,11 @@
                 structuredBranch.style.display = 'block';
                 unstructuredBranch.style.display = 'none';
                 commonEnding.style.display = 'block';
-                
+
                 // Mettre les champs du "Structured" en required, et enlever ceux de "Unstructured"
                 toggleRequired(structuredBranch, true);
                 toggleRequired(unstructuredBranch, false);
-            } 
+            }
             else if (noRadio.checked) {
                 structuredBranch.style.display = 'none';
                 unstructuredBranch.style.display = 'block';
@@ -570,23 +738,24 @@
         const form = document.getElementById('csrForm');
         form.addEventListener('submit', e => {
             e.preventDefault();
-            
+
             document.getElementById('submitButton').disabled = true;
             document.getElementById('loadingMessage').style.display = 'block';
 
-            fetch(SCRIPT_URL, { method: 'POST', body: new FormData(form)})
-            .then(response => {
-                document.getElementById('loadingMessage').style.display = 'none';
-                document.getElementById('successMessage').style.display = 'block';
-                // form.reset(); // Optionnel : remettre à zéro
-            })
-            .catch(error => {
-                document.getElementById('loadingMessage').style.display = 'none';
-                alert('Erreur lors de l\'envoi. Vérifiez votre connexion.');
-                console.error('Error!', error.message);
-                document.getElementById('submitButton').disabled = false;
-            });
+            fetch(SCRIPT_URL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    document.getElementById('loadingMessage').style.display = 'none';
+                    document.getElementById('successMessage').style.display = 'block';
+                    // form.reset(); // Optionnel : remettre à zéro
+                })
+                .catch(error => {
+                    document.getElementById('loadingMessage').style.display = 'none';
+                    alert('Erreur lors de l\'envoi. Vérifiez votre connexion.');
+                    console.error('Error!', error.message);
+                    document.getElementById('submitButton').disabled = false;
+                });
         });
     </script>
 </body>
+
 </html>
