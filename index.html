@@ -106,6 +106,90 @@
             color: #202124;
             line-height: 1.5;
         }
+
+        /* Thank You Page */
+        .thank-you-container {
+            display: none;
+            max-width: 770px;
+            margin: 60px auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+            overflow: hidden;
+            border-top: 10px solid #0056b3;
+            text-align: center;
+            padding: 50px 40px;
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        .thank-you-container img {
+            max-width: 200px;
+            height: auto;
+            margin-bottom: 30px;
+        }
+
+        .thank-you-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #28a745, #20c997);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            animation: scaleIn 0.5s ease-out 0.3s both;
+        }
+
+        .thank-you-icon svg {
+            width: 40px;
+            height: 40px;
+            fill: white;
+        }
+
+        .thank-you-title {
+            font-size: 28px;
+            font-weight: 600;
+            color: #202124;
+            margin-bottom: 15px;
+        }
+
+        .thank-you-message {
+            font-size: 16px;
+            color: #5f6368;
+            line-height: 1.7;
+            max-width: 500px;
+            margin: 0 auto 30px;
+        }
+
+        .thank-you-footer {
+            font-size: 13px;
+            color: #9aa0a6;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes scaleIn {
+            from {
+                transform: scale(0);
+            }
+
+            to {
+                transform: scale(1);
+            }
+        }
     </style>
 </head>
 
@@ -684,9 +768,27 @@
         </form>
     </div>
 
+    <!-- Thank You Page -->
+    <div class="thank-you-container" id="thankYouPage">
+        <img src="Lacme-1080x508 - Clear.png" alt="LACME Logo"
+            onerror="this.onerror=null; this.src='https://raw.githubusercontent.com/77Darius77/csr-questionnaire-EN/main/Lacme-1080x508%20-%20Clear.png';">
+        <div class="thank-you-icon">
+            <svg viewBox="0 0 24 24">
+                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" />
+            </svg>
+        </div>
+        <h1 class="thank-you-title">Thank you!</h1>
+        <p class="thank-you-message">
+            Your responses have been successfully submitted.<br>
+            We sincerely thank you for taking the time to complete this CSR questionnaire.<br>
+            Your contribution helps us build a more sustainable and responsible partnership.
+        </p>
+        <p class="thank-you-footer">LACME SAS &mdash; Corporate Social Responsibility</p>
+    </div>
+
     <script>
         // Remplace par ton URL Web App Google Apps Script
-        const SCRIPT_URL = 'TON_URL_APPS_SCRIPT_ICI';
+        const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz3HBaxRNy6qpuW46Et-rkAFloqgoYTRH5B7CTDMpGqj5otlCTr51jhMhPicSyXXeVx/exec';
 
 
         function handleBranching() {
@@ -735,18 +837,28 @@
             });
         }
 
+        function showThankYouPage() {
+            document.querySelector('.form-container').style.display = 'none';
+            document.getElementById('thankYouPage').style.display = 'block';
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
         const form = document.getElementById('csrForm');
         form.addEventListener('submit', e => {
             e.preventDefault();
+
+            // If the script URL is not configured, show thank you page directly (local testing)
+            if (!SCRIPT_URL || SCRIPT_URL === 'TON_URL_APPS_SCRIPT_ICI') {
+                showThankYouPage();
+                return;
+            }
 
             document.getElementById('submitButton').disabled = true;
             document.getElementById('loadingMessage').style.display = 'block';
 
             fetch(SCRIPT_URL, { method: 'POST', body: new FormData(form) })
                 .then(response => {
-                    document.getElementById('loadingMessage').style.display = 'none';
-                    document.getElementById('successMessage').style.display = 'block';
-                    // form.reset(); // Optionnel : remettre à zéro
+                    showThankYouPage();
                 })
                 .catch(error => {
                     document.getElementById('loadingMessage').style.display = 'none';
